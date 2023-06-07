@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for x in video %}
+ <video class="embed-responsive embed-responsive-16by9" controls="controls"  width="500"  height="300">
+      <source src="{{x.video.url}}" type="video/mp4" /></video>
+{% endfor %}
+</body>
+</html>

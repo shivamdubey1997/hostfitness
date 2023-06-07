@@ -1,0 +1,46 @@
+from django.contrib import admin
+from django.urls import path,include
+from . import views
+
+urlpatterns = [
+    path('',views.index,name="index"),
+    path('signup/',views.signup,name="signup"),
+    path('loggedin/',views.loggedin,name="loggedin"),
+    path('logout/', views.Logout, name="logout"),
+    path('video/',views.video,name="video"),
+    path('uploadpost/',views.uploadpost,name="uploadpost"),
+    path('workouts/',views.workouts,name="workouts"),
+    path('uploadworkoutvideo/',views.uploadworkoutvideo,name="uploadworkoutvideo"),
+    path('musclevideo/<int:id>',views.musclevideo, name='musclevideo'),
+    path('musclecategory/<int:id>',views.musclecategory, name='musclecategory'),
+    path('favourites/<int:id>',views.favourites, name='favourites'),
+    path('loginprofile/<int:id>',views.loginprofile, name='loginprofile'),
+    path('userprofile/',views.userprofile, name='userprofile'),
+    path('saved/',views.saved, name='saved'),
+    path('edit/<int:id>',views.edit, name='edit'),
+    path('follow/<int:id>',views.follow, name='follow'),
+    path('unfollow/<int:id>',views.unfollow, name='unfollow'),
+    path('uploadbodyweight/', views.uploadbodyweight, name="uploadbodyweight"),
+    path('selectcategory/', views.selectcategory, name="selectcategory"),
+    path('musclecategorylevel/<int:id>/', views.musclecategorylevel, name="musclecategorylevel"),
+    path('musclevideobeginner/<int:id>/', views.musclevideobeginner, name="musclevideobeginner"),
+    path('musclecategorybeginner/<int:id>/', views.musclecategorybeginner, name="musclecategorybeginner"),
+    path('musclevideointermediate/<int:id>/', views.musclevideointermediate, name="musclevideointermediate"),
+    path('musclecategoryintermediate/<int:id>/', views.musclecategoryintermediate, name="musclecategoryintermediate"),
+    path('musclevideoinadvance/<int:id>/', views.musclevideoinadvance, name="musclevideoinadvance"),
+    path('musclecategoryadvance/<int:id>/', views.musclecategoryadvance, name="musclecategoryadvance"),
+    path('musclevideoinprofessional/<int:id>/', views.musclevideoinprofessional, name="musclevideoinprofessional"),
+    path('musclecategoryprofessional/<int:id>/', views.musclecategoryprofessional, name="musclecategoryprofessional"),
+    path('videodetail/<int:id>/', views.videodetail, name="videodetail"),
+    path('bodyvideodetail/<int:id>/', views.bodyvideodetail, name="bodyvideodetail"),
+    path('bodyweightworkouts/', views.bodyweightworkouts, name="bodyweightworkouts"),
+    path('productprofile/<int:id>', views.productprofile, name="productprofile"),
+    path('productprofilevlog/<int:id>', views.productprofilevlog, name="productprofilevlog"),
+    path('userprodprofile/', views.userprodprofile, name="userprodprofile"),
+    path('uploadthirtyday/', views.uploadthirtyday, name="uploadthirtyday"),
+    path('thirtydayhomepage/', views.thirtydayhomepage, name="thirtydayhomepage"),
+    path('thirtyday/<int:id>', views.thirtyday, name="thirtyday"),
+    path('pinworkout/<int:id>', views.pinworkout, name="pinworkout"),
+
+
+]
